@@ -30,7 +30,7 @@ class Car
 
     public function infomation()
     {
-        $this->infomation = '車の車種:'.$this->getName().'、車体番号:'.$this->getNumber().'、カラー:'.$this->getColor().'です。';
+        $this->infomation = '車の車種:' . $this->getName() . '、車体番号:' . $this->getNumber() . '、カラー:' . $this->getColor() . 'です。';
         return $this->infomation;
     }
 
@@ -56,21 +56,22 @@ class Taxi extends Car
 
     public function infomation()
     {
-        return parent::infomation().'乗車人数は'.$this->passenger.'人です';
+        return parent::infomation() . '乗車人数は' . $this->passenger . '人です';
     }
 
     public function error($num)
     {
-        if($num > 0 && is_int($num)){
+        if ($num > 0 && is_int($num)) {
             return true;
         }
     }
 
     public function pickup($num)
     {
-        if($this->error($num)){
+        if ($this->error($num)) {
             $this->passenger += $num;
-        }else{
+        }
+        else {
             echo '降車人数に誤りがあります';
         }
         
@@ -78,14 +79,16 @@ class Taxi extends Car
 
     public function lower($num)
     {
-        if($this->error($num)){
-            if(($this->passenger - $num) >= 0){
+        if ($this->error($num)) {
+            if (($this->passenger - $num) >= 0) {
                 $this->passenger -= $num;
-                echo $num.'人降車しました';
-            }else{
+                echo $num . '人降車しました';
+            }
+            else {
                 echo '降車人数に誤りがあります';
             }
-        }else{
+        }
+        else {
             echo '降車人数に誤りがあります';
         }
         
