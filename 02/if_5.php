@@ -1,21 +1,23 @@
 <?php
 
-    $num = 10;
-    $answer = 0;
-    for($i=2; $i<$num; $i++){
-        if($num % $i == 0){
-            $answer = 1;
-            break;
+    $num = 11;
+    $prime = true;
+    
+    if($num == 1 || $num == 0){
+        $prime = false;
+    }
+    else{
+        for($i=2; $i<$num; $i++){
+            if($num % $i == 0){
+                $prime = false;
+                break;
+            }
         }
     }
 
-    if($num == 1 || $num ==0){
-        $answer = 1;
+    if($prime){
+        echo $num . ' は素数です';
     }
-
-    if($answer == 0){
-        echo $num.'は素数です';
-    }
-    elseif($answer == 1){
-        echo $num.'は素数ではありません';
+    else{
+        echo $num . ' は素数ではありません';
     }
