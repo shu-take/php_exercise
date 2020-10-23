@@ -5,8 +5,7 @@
     
     if ($num == 1 || $num == 0) {
         $prime = false;
-    }
-    else {
+    } else {
         for ($i=2; $i<$num; $i++) {
             if ($num % $i == 0) {
                 $prime = false;
@@ -17,7 +16,6 @@
 
     if ($prime) {
         echo $num . ' は素数です';
-    }
-    else {
+    } else {
         echo $num . ' は素数ではありません';
     }

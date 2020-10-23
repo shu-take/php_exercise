@@ -5,10 +5,8 @@
 
     if ($a > $b) {
         echo $a;
-    }
-    elseif ($a < $b) {
+    } elseif ($a < $b) {
         echo $b;
-    }
-    else {
+    } else {
         echo '入力された値は等しいです';
     }

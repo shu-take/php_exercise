@@ -70,8 +70,7 @@ class Taxi extends Car
     {
         if ($this->error($num)) {
             $this->passenger += $num;
-        }
-        else {
+        } else {
             echo '降車人数に誤りがあります';
         }
         
@@ -83,12 +82,10 @@ class Taxi extends Car
             if (($this->passenger - $num) >= 0) {
                 $this->passenger -= $num;
                 echo $num . '人降車しました';
-            }
-            else {
+            } else {
                 echo '降車人数に誤りがあります';
             }
-        }
-        else {
+        } else {
             echo '降車人数に誤りがあります';
         }
         
